@@ -1,2 +1,2 @@
 # HE-VPR
-HE-VPR for ICRA 2026
+HE-VPR
