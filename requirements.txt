@@ -1,0 +1,12 @@
+faiss==1.7.4
+matplotlib==3.8.0
+numpy==1.24.4
+pandas==2.2.3
+pillow==10.4.0
+prettytable==3.15.1
+pytorch-lightning==2.0.9
+pytorch-metric-learning==2.8.1
+scikit-learn==1.6.0
+scipy==1.15.0
+torch @ https://download.pytorch.org/whl/cu117/torch-1.13.1%2Bcu117-cp310-cp310-win_amd64.whl
+torchvision==0.14.1
