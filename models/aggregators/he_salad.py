@@ -119,7 +119,6 @@ class HE_SALAD(nn.Module):
         Returns:
             f (torch.Tensor): The global descriptor [B, m*l + g]
         """
-        # 修改，根据CRICA backbone的返回进行赋值
         # hardcoding torch.Size([128, 768, 16, 16])
         t = x["x_norm_clstoken"]  # Extract features and token
         x = x["x_norm_patchtokens"].reshape(((t.shape)[0], 16, 16, self.num_channels)).permute(0, 3, 1, 2)
