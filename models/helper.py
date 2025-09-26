@@ -52,7 +52,6 @@ def get_backbone(backbone_arch='resnet50',
         return backbones.get_mona_backbone(pretrained_foundation=True, **backbone_config)
 
     elif 'transvpr' in backbone_arch.lower():
-        # 全在aggregator之中实现
         return backbones.extract_transvpr()
 
 
