@@ -53,7 +53,7 @@ class GEStuidioHEDataset(data.Dataset):
         if index < self.numDb:
             pass
         else:
-            # 切成正方形
+            # make sure the width = height
             img = img.crop(((img.size[0] - img.size[1]) / 2, 0, (img.size[0] + img.size[1]) / 2, img.size[1]))
         if self.input_transform:
             img = self.input_transform(img)

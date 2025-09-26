@@ -33,7 +33,6 @@ class MHFlightHEDataset(data.Dataset):
         self.images = self.db_paths + self.qr_paths
 
         self.db_utms = np.array([(re.findall("\d+", path)[-1], 0) for path in self.db_paths]).astype(float)
-        # 利用相机内参，将图片海拔高度转换成图片的宽度
         self.qr_utms = np.array([((float(path.split("@")[4])-35) * 15.36 / 12 , 0) for path in self.qr_paths]).astype(float)
 
         self.numDb = len(self.db_utms)
