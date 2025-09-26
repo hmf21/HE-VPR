@@ -212,7 +212,6 @@ class VPRModel(pl.LightningModule):
             val_step_outputs = [val_step_outputs]
 
         for i, (val_set_name, val_dataset) in enumerate(zip(dm.val_set_names, dm.val_datasets)):
-            # 这里定义了测试数据集的具体测试方法以及测试指标
             feats = torch.concat(val_step_outputs[i], dim=0)
             if 'pitts' in val_set_name:
                 # split to ref and queries
