@@ -47,7 +47,6 @@ HE-VPR/
 |-- models/                  # Original models plus missing Mona modules
 |-- utils/                   # Original validation utilities
 |-- weights/
-|   |-- README.md            # Checkpoint names and checksums
 |   |-- vpr.ckpt             # Add separately: VPR adapter
 |   |-- he.ckpt              # Add separately: HE adapter
 |-- tests/                  # Data-free retrieval checks
@@ -58,7 +57,7 @@ HE-VPR/
 |-- RESULTS.md
 ```
 
-The VPR checkpoint is the epoch-44 model used by the newer VPR evaluation; the HE checkpoint is its epoch-25 height model. Both include the complete backbone, so a separate DINOv2 foundation weight is unnecessary for inference. The two large checkpoint files are not in this code-only merge preview; see [weights/README.md](weights/README.md) for the expected names and hashes. Raw datasets and training code are not included.
+The VPR checkpoint is the epoch-44 model used by the newer VPR evaluation; the HE checkpoint is its epoch-25 height model. Both include the complete backbone, so a separate DINOv2 foundation weight is unnecessary for inference. Raw datasets and training code are not included.
 
 ## Getting Started
 
@@ -68,14 +67,7 @@ Use Python 3.10 and install the dependencies. The local smoke test used PyTorch 
 python -m pip install -r requirements.txt
 ```
 
-Place the two checkpoints at `weights/vpr.ckpt` and `weights/he.ckpt` before running extraction. The download links will be added after the checkpoints are uploaded as GitHub Release assets:
-
-| Checkpoint | Download |
-| --- | --- |
-| `vpr.ckpt` | TODO: add Release asset URL |
-| `he.ckpt` | TODO: add Release asset URL |
-
-See [weights/README.md](weights/README.md) for checksums. Do not commit these large checkpoint files to Git.
+Download the [model weights](https://cloud.tsinghua.edu.cn/d/a143e23c5ed34934a43a/), create a `weights/` directory, and place the checkpoints there as `vpr.ckpt` and `he.ckpt` before running extraction.
 
 Place the datasets outside this folder. GEStudio expects `map_database/` and `query_images/` beneath its data root; MHFlight expects `map_database_2/` and `query_images/Traj1/` plus `query_images/Traj2/`. The image filenames must retain their `@`-separated location and height fields.
 
@@ -90,4 +82,4 @@ Use `--dataset jimo` and the MHFlight data root for the other dataset. HE descri
 
 ## Release Notes
 
-The manuscript's HE-VPR results are included for context, but this evaluation package currently reproduces only full-database VPR retrieval and standalone HE descriptor extraction. The legacy test scripts still contain old checkpoint paths and are not the documented entry point. The package has no project-wide license yet; confirm the rights to redistribute figures and checkpoints before public upload. Third-party license texts are under `THIRD_PARTY_LICENSES/`.
+Third-party license texts are under `THIRD_PARTY_LICENSES/`.
