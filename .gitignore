@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.conda/
+.venv/
+features/
+outputs/
+weights/*.ckpt
+*.log
