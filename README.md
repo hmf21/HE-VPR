@@ -25,7 +25,7 @@ The manuscript evaluates HE-VPR on two multi-altitude datasets. **GEStudio** con
 
 | GEStudio | MHFlight |
 | :---: | :---: |
-| ![GEStudio examples at different heights](assets/gestudio.png) | ![MHFlight trajectories and examples](assets/mhflight.png) |
+| <img src="assets/gestudio.png" alt="GEStudio examples at different heights" width="400"> | <img src="assets/mhflight.png" alt="MHFlight trajectories and examples" width="400"> |
 
 ### Results in the manuscript
 
